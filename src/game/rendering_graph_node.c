@@ -2226,12 +2226,12 @@ void geo_process_node_and_siblings(struct GraphNode *firstNode) {
                     case GRAPH_NODE_TYPE_OBJECT:
                         geo_process_object((struct Object *) curGraphNode);
                         break;
-                    case GRAPH_NODE_TYPE_ANIMATED_PART:
+                    case GRAPH_NODE_TYPE_ANIMATED_PART: {
                         struct GraphNodeAnimatedPart * node = (struct GraphNodeAnimatedPart *) curGraphNode;
                         if (gCurGraphNodeObject == &gMarioObject->header.gfx)
                             AddToBoneCountList(false, false, node->translation);
                         geo_process_animated_part((struct GraphNodeAnimatedPart *) curGraphNode);
-                        break;
+                    } break;
                     case GRAPH_NODE_TYPE_MCOMP_EXTRA:
                         if (gCurGraphNodeObject == &gMarioObject->header.gfx) {
                             mcomp_bone_detected = true;
