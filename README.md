@@ -10,6 +10,7 @@ brew install make mingw-w64 gcc sdl2 pkg-config glew glfw3 libusb coreutils adda
 paste your unmodified vanilla sm64 rom into the repo's directory
 gmake OSX_BUILD=1
 notes for fgetcat:
+
 it fail the first time and how i managed to solve this issue is by using these commands in this order:
 brew --prefix glew
 ls "$(brew --prefix glew)/lib/libGLEW*"
